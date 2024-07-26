@@ -1,7 +1,4 @@
-interface Category {
-    nombreBoton: string;
-    categorias: string[];
-}
+import { Category } from "../interfaces/types";
 
 const categoriesList: Category[] = [
     {

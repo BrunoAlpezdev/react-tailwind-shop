@@ -1,10 +1,6 @@
-import {
-    Navbar, 
-    NavbarBrand, 
-    NavbarContent, 
-  } from "@nextui-org/react"
+import { Navbar, NavbarBrand, NavbarContent, } from "@nextui-org/react"
 import DropDownButtonComponent from "./DropDownButtonComponent.tsx"
-import categoriesList from '../types/categories.ts'
+import categoriesList from '../data/categoriesList.ts'
 import '../styles/App.css'
 
 export function NavbarComponent() {

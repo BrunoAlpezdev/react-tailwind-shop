@@ -1,6 +1,6 @@
 import { CarouselComponent } from '../components/CarouselComponent'
 import ProductCardComponent from '../components/ProductCardComponent.tsx'
-import productsList from '../types/products'
+import productsList from '../data/productsList.ts'
 import FooterComponent from '../components/FooterComponent.tsx'
 
 export default function HomePage() {

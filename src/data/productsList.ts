@@ -1,10 +1,4 @@
-type products = {
-    idProducto: string,
-    imagen: string,
-    nombreProducto: string,
-    descripcion: string,
-    categoria: string
-}
+import { products } from '../interfaces/types'
 
 const productsList: products[] = [
     {
