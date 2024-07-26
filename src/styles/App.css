@@ -13,33 +13,32 @@ code {
     monospace;
 }
 
-.logonav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: auto;
-  width: 48%;
-  border-radius: 30%;
-}
-/*css del menu*/
+/*
+------------------------------------Esto--------------------------------
 .menu-bar-container {
-  display: flex;
-  justify-content: flex-start; 
-  margin-right: 380px;
+    display: flex;
+    justify-content: flex-start; 
+    margin-right: 380px;
+  }
+  
+  .menu-bar-item{
+    margin-right: 40px;
+  }
+  
+  .menu-bar-item:last-child {
+    margin-right: 40px;
+  }
+  
+  .nbmenu {
+    height: 300px
 }
+----------------------------Es reemplazado por---------------------------
 
-.menu-bar-item{
-  margin-right: 40px;
-}
+<div className="flex menu-bar-container gap-12"> en el archivo src/components/NavBarComponent.tsx
 
-.menu-bar-item:last-child {
-  margin-right: 40px;
-}
-/*fin del css del menu*/
+Despues de hacer el css, investiguen como pasar los cambios con tailwindcss a los componentes de react así nos ahorramos codigo y se aprende a usar tailwindcss
 
-.nbmenu {
-  height: 300px
-}
+*/
 
 
 /*incio del css del footer*/

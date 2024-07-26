@@ -1,39 +1,29 @@
 import {
-    Button,
     Navbar, 
     NavbarBrand, 
     NavbarContent, 
-    NavbarItem, 
-    NavbarMenuToggle,
-    NavbarMenu,
-    NavbarMenuItem
   } from "@nextui-org/react"
-import MenuBar from "../components/MenuBar"
+import DropDownButtonComponent from "./DropDownButtonComponent.tsx"
 import categoriesList from '../types/categories.ts'
 import '../styles/App.css'
 
 export function NavbarComponent() {
     return (
-        <div className="navbarhp">
-            <Navbar position="sticky">
+        <div className="">
+            <Navbar position="sticky" isBlurred={false} className="h-28">
                 <NavbarContent>
-                    <NavbarBrand><img className="logonav" src="https://cdn.discordapp.com/avatars/434778524621209610/a_bf9674e6d311743d413aa1f7f75a43cf?size=1024" alt="" /></NavbarBrand>
+
+                    <NavbarBrand>
+                        <img className="h-24" src="https://cdn.discordapp.com/avatars/434778524621209610/a_bf9674e6d311743d413aa1f7f75a43cf?size=1024" alt="" />
+                    </NavbarBrand>
+
                     {/* Iteración de las categorías listadas en /types/categories.ts */}
-                    <div className="menu-bar-container">
+                    <div className="flex menu-bar-container gap-12">
                         {categoriesList.map((category, index) => (
-                            <MenuBar key={index} nombreBoton={category.nombreBoton} categorias={category.categorias} />
+                            <DropDownButtonComponent key={index} nombreBoton={category.nombreBoton} categorias={category.categorias} />
                         ))}
                     </div>
-                    {/* Iteración de las categorías listadas en /types/categories.ts */}
-                    <NavbarMenuToggle />
-                    <div className="nav-bar-desp" style={{ marginLeft: "auto" }}>
-                        <NavbarMenu >
-                            <NavbarMenuItem>Home</NavbarMenuItem>
-                            <NavbarMenuItem>About</NavbarMenuItem>
-                            <NavbarMenuItem>Services</NavbarMenuItem>
-                            <NavbarMenuItem>Contact</NavbarMenuItem>
-                        </NavbarMenu>
-                    </div>
+
                 </NavbarContent>
             </Navbar>
         </div>
