@@ -17,19 +17,19 @@
     overflow: hidden;
 
     &:nth-of-type(1) {
-      background: url("https://images.pexels.com/photos/1845208/pexels-photo-1845208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      background: url("https://ulook.cl/wp-content/uploads/2022/03/IMG-20230419-WA0083.jpg")
         no-repeat 50% / cover;
     }
     &:nth-of-type(2) {
-      background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      background: url("https://telasdivinas.com/wp-content/uploads/2020/09/telas-divinas-pantalones-de-moda-1.jpg")
         no-repeat 50% / cover;
     }
     &:nth-of-type(3) {
-      background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      background: url("https://down-cl.img.susercontent.com/file/sg-11134201-22120-reczt26u75kvfa")
         no-repeat 50% / cover;
     }
     &:nth-of-type(4) {
-      background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      background: url("https://hips.hearstapps.com/hmg-prod/images/guest-wears-sunglasses-a-brown-wool-scarf-a-yellow-long-news-photo-1667486766.jpg?crop=0.476xw:0.714xh;0.231xw,0.286xh&resize=640:*")
         no-repeat 50% / cover;
     }
 

@@ -1,4 +1,5 @@
 body {
+  position: relative;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,3 +12,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.logonav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 48%;
+  border-radius: 30%;
+}
+/*css del menu*/
+.menu-bar-container {
+  display: flex;
+  justify-content: flex-start; 
+  margin-right: 380px;
+}
+
+.menu-bar-item{
+  margin-right: 40px;
+}
+
+.menu-bar-item:last-child {
+  margin-right: 40px;
+}
+/*fin del css del menu*/
+
+.nbmenu {
+  height: 300px
+}
+
+
+/*incio del css del footer*/
+.footer-bar {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+}
+/*fin del css del footer*/
