@@ -1,4 +1,5 @@
 import {Card, Image, Button, CardHeader} from "@nextui-org/react";
+import { Link } from "react-router-dom";
 type ProductCardComponentProps = {
     idProducto: number,
     imagen: string,
@@ -28,19 +29,23 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
         es el que se encarga de mostrar la informacion de un producto en especifico
         y se le pasa el id del producto para que pueda mostrar la informacion
     */}
-    const linkProducto = "/product/" + props.idProducto;
-    
+
+    {/* Se arma el path para pasarselo al link ya que si se le pasa en el componente directo peta */}
+    const path = '/producto/' + props.idProducto;
+
   return (
     <div className="max-w-fit">
         <Card isFooterBlurred radius="lg" className="border-none bg-black/60 bg-opacity- p-2">
-
-            <a href={linkProducto}>
-                <CardHeader className=" text-white pb-0 pt-2 px-4 flex-col items-center">
-                    <p className="text-2xl uppercase font-medium">{props.nombreProducto}</p>
-                </CardHeader>
-
-                <Image alt="main product card" width={400} height={400} className="object-cover" src={props.imagen} />
-            </a>
+            {/* Se le pasa el path al link para que pueda redirigir a la pagina de producto en especifico */}
+            <Link to={path}>
+                <div>
+                    <CardHeader className=" text-white pb-0 pt-2 px-4 flex-col items-center">
+                        <p className="text-2xl uppercase font-medium">{props.nombreProducto}</p>
+                    </CardHeader>
+            
+                    <Image alt="main product card" width={400} height={400} className="object-cover" src={props.imagen} />
+                </div>
+            </Link>
 
             <section className="flex justify-between border border-white/20 bg-black/60 backdrop-blur-sm bottom-3 absolute rounded-xl py-1 w-[calc(100%-24px)] shadow-small ml-1 z-10">
 
