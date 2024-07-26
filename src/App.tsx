@@ -15,11 +15,12 @@ function App() {
       
       <section className='pt-8 pb-12'>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route index element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/politicas" element={<AboutPage />} />
           <Route path="/contacto" element={<AboutPage />} />
           <Route path="/producto/:idProducto" element={<ProductPage />} />
+          <Route path="*" Component={() => <h2 className='text-white'>404 - Page Not Found</h2>} />
           {/* ... */}
       </Routes>
       </section>
