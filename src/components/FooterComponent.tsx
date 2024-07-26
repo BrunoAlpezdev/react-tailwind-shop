@@ -15,12 +15,12 @@ const Footer: React.FC<Props> = (props) => {
                 <div className="max-w-screen-xl mx-auto py-4 px-5 flex justify-between items-center">
                     <nav>
                         <ul className="flex space-x-4">
-                            <li><a href="/privacy" className="">Políticas de Privacidad</a></li>
-                            <li><a href="/contact" className="">Contacto</a></li>
-                            <Link to='/about'></Link>
+                            <li><Link to="/privacy" className="">Políticas de Privacidad</Link></li>
+                            <li><Link to="/contact" className="">Contacto</Link></li>
+                            <li><Link to='/about'>About</Link></li>
                         </ul>
                     </nav>
-                    <span><a href="/">logo</a></span>
+                    <span><Link to='/'>logo</Link></span>
                 </div>
             </footer>
         </div>
