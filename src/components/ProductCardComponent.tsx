@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 
 type ProductCardComponentProps = {
-    idProducto: number,
+    idProducto: string,
     imagen: string,
     nombreProducto: string,
     descripcion: string,
