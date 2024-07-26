@@ -1,5 +1,6 @@
-import {Card, CardFooter, Image, Button, CardHeader} from "@nextui-org/react";
+import {Card, Image, Button, CardHeader} from "@nextui-org/react";
 type ProductCardComponentProps = {
+    idProducto: number,
     imagen: string,
     nombreProducto: string,
     descripcion: string,
@@ -15,26 +16,46 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
     const agregarCarritoClick = () => {
         console.log("Agregar al carrito");
     };
-
+    
+    {/* 
+        en el App.tsx se encuentra un Componente que se llama Router,
+        este es para poder acceder a los path de cada cosa,
+        si se fijan, se tuvo que crear uno con el siguiente texto:
+        <Route path="/producto/:idProducto" element={<ProductPage />} />
+        para que se pueda acceder a la pagina de un producto en especifico
+        y se pueda ver la informacion de este, para poder hacerlo se tuvo que
+        crear un componente que se llama ProductPage.tsx, este componente
+        es el que se encarga de mostrar la informacion de un producto en especifico
+        y se le pasa el id del producto para que pueda mostrar la informacion
+    */}
+    const linkProducto = "/product/" + props.idProducto;
+    
   return (
     <div className="max-w-fit">
-        <Card isFooterBlurred radius="lg" className="border-none">
-            <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
-                <p className="text-2xl uppercase font-bold">{props.nombreProducto}</p>
-            </CardHeader>
+        <Card isFooterBlurred radius="lg" className="border-none bg-black/60 bg-opacity- p-2">
 
-            <a href="/about">
+            <a href={linkProducto}>
+                <CardHeader className=" text-white pb-0 pt-2 px-4 flex-col items-center">
+                    <p className="text-2xl uppercase font-medium">{props.nombreProducto}</p>
+                </CardHeader>
+
                 <Image alt="main product card" width={400} height={400} className="object-cover" src={props.imagen} />
             </a>
 
-            <CardFooter className="flex justify-between border border-white/20 bg-white/10 bottom-1 absolute rounded-xl py-1 w-[calc(100%-8px)] shadow-small ml-1 z-10">
-                <Button onPress={comprarClick} className="flex-1 text-sm text-white bg-black/20 mx-1" variant="flat" color="default" radius="lg" size="md">
-                    Comprar
+            <section className="flex justify-between border border-white/20 bg-black/60 backdrop-blur-sm bottom-3 absolute rounded-xl py-1 w-[calc(100%-24px)] shadow-small ml-1 z-10">
+
+                {/* Aquí se puede agregar un icono de carrito de compras */}
+
+                <Button onPress={comprarClick} className="flex-1 text-medium text-white bg-primary/60 font-normal mx-1 hover:skew-x-12" variant="flat" radius="lg" size="md">
+                    Comprar Ahora {/* Estos Componentes tienen en el estilo un "skew" esto hace que se vea como ladeado el boton y el texto, en caso de no gustar, se retira nomas */}
                 </Button>
-                <Button onPress={agregarCarritoClick} className="flex-1 text-sm text-white bg-black/20 mx-1" variant="flat" color="default" radius="lg" size="md">
-                    Agregar al carrito
+
+                <Button onPress={agregarCarritoClick} className="flex-1 text-medium text-black bg-success/60 font-normal mx-1 hover:bg-success/100" variant="flat" radius="lg" size="md">
+                    Agregar al carrito {/* Estos Componentes tienen en el estilo un "skew" esto hace que se vea como ladeado el boton y el texto, en caso de no gustar, se retira nomas */}
                 </Button>
-            </CardFooter>
+                
+            </section>
+            
         </Card>
     </div>
   );
