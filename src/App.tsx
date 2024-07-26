@@ -1,11 +1,13 @@
 import './styles/App.css'
 import './styles/Carousel.css'
 import { NavbarComponent } from './components/NavbarComponent'
+import { Routes, Route } from "react-router-dom";
 import FooterComponent from './components/FooterComponent.tsx'
 import HomePage from './pages/HomePage.tsx'
-import { Routes, Route } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
+import NotFoundPage from './pages/NotFoundPage.tsx';
+
 
 function App() {
   return (
@@ -14,14 +16,14 @@ function App() {
       <NavbarComponent />
       
       <section className='pt-8 pb-12'>
-        <Routes>
-          <Route index element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/politicas" element={<AboutPage />} />
-          <Route path="/contacto" element={<AboutPage />} />
-          <Route path="/producto/:idProducto" element={<ProductPage />} />
-          <Route path="*" Component={() => <h2 className='text-white'>404 - Page Not Found</h2>} />
-          {/* ... */}
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/politicas" element={<AboutPage />} />
+        <Route path="/contacto" element={<AboutPage />} />
+        <Route path="/producto/:idProducto" element={<ProductPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+        {/* ... */}
       </Routes>
       </section>
     </div>
