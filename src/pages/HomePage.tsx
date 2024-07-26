@@ -12,7 +12,7 @@ export default function HomePage() {
       </section>
       <section className='flex justify-between mt-6 mb-4pt-8 pb-12'>
         {productsList.map((product) => (
-          <ProductCardComponent idProducto={product.idProducto} imagen={product.imagen} nombreProducto={product.nombreProducto} descripcion={product.descripcion} categoria={product.categoria} />
+          <ProductCardComponent key={product.idProducto} idProducto={product.idProducto} imagen={product.imagen} nombreProducto={product.nombreProducto} descripcion={product.descripcion} categoria={product.categoria} />
         ))}
       </section>
       <section className='xd'>

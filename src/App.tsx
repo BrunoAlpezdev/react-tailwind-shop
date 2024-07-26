@@ -1,7 +1,8 @@
 import './styles/App.css'
 import './styles/Carousel.css'
 import { NavbarComponent } from './components/NavbarComponent'
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import FooterComponent from './components/FooterComponent.tsx'
 import HomePage from './pages/HomePage.tsx'
 import AboutPage from "./pages/AboutPage";
@@ -16,15 +17,17 @@ function App() {
       <NavbarComponent />
       
       <section className='pt-8 pb-12'>
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/politicas" element={<AboutPage />} />
-        <Route path="/contacto" element={<AboutPage />} />
-        <Route path="/producto/:idProducto" element={<ProductPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-        {/* ... */}
-      </Routes>
+      <AnimatePresence mode='wait'>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/politicas" element={<AboutPage />} />
+          <Route path="/contacto" element={<AboutPage />} />
+          <Route path="/producto/:idProducto" element={<ProductPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+          {/* ... */}
+        </Routes>
+      </AnimatePresence>
       </section>
     </div>
     <section className='xd'>

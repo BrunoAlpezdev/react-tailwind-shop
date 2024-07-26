@@ -1,5 +1,7 @@
 import {Card, Image, Button, CardHeader} from "@nextui-org/react";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
+
 type ProductCardComponentProps = {
     idProducto: number,
     imagen: string,
@@ -32,9 +34,10 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
 
     {/* Se arma el path para pasarselo al link ya que si se le pasa en el componente directo peta */}
     const path = '/producto/' + props.idProducto;
+    const uniqueLayoutId = `productCardImage-${props.idProducto}`;
 
   return (
-    <div className="max-w-fit">
+    <motion.div className="max-w-fit">
         <Card isFooterBlurred radius="lg" className="border-none bg-black/60 bg-opacity- p-2">
             {/* Se le pasa el path al link para que pueda redirigir a la pagina de producto en especifico */}
             <Link to={path}>
@@ -42,8 +45,7 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
                     <CardHeader className=" text-white pb-0 pt-2 px-4 flex-col items-center">
                         <p className="text-2xl uppercase font-medium">{props.nombreProducto}</p>
                     </CardHeader>
-            
-                    <Image alt="main product card" width={400} height={400} className="object-cover" src={props.imagen} />
+                    <motion.img layoutId={uniqueLayoutId} alt="main product card" width={400} height={400} className="object-cover w-96 h-96 rounded-2xl" src={props.imagen} />
                 </div>
             </Link>
 
@@ -62,7 +64,7 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
             </section>
             
         </Card>
-    </div>
+    </motion.div>
   );
 }
 
