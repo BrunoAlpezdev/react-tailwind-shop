@@ -12,17 +12,19 @@ function App() {
     <div className='flex flex-col min-h-screen'>
       <NavbarComponent />
       
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/politicas" element={<AboutPage />} />
-        <Route path="/contacto" element={<AboutPage />} />
-        {/* ... */}
+      <section className='pt-8 pb-12'>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/politicas" element={<AboutPage />} />
+          <Route path="/contacto" element={<AboutPage />} />
+          {/* ... */}
       </Routes>
-      <section className='xd'>
-        <FooterComponent />
       </section>
     </div>
+    <section className='xd'>
+      <FooterComponent />
+    </section>
   </>
   )
 }
