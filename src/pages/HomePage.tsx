@@ -19,9 +19,5 @@ export default function HomePage() {
       <FooterComponent />
       </section>
       </div>
-      <div>
-        <h1>Home Page</h1>
-        <p>Esta es la página de inicio</p>
-      </div>
     )
 }
