@@ -30,6 +30,7 @@ function App() {
       </AnimatePresence>
       </section>
     </div>
+
     <section className='xd'>
       <FooterComponent />
     </section>

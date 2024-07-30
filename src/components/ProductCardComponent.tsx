@@ -1,4 +1,4 @@
-import {Card, Image, Button, CardHeader} from "@nextui-org/react";
+import {Card, Button, CardHeader} from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 
