@@ -18,7 +18,7 @@ const Footer: React.FC<Props> = (props) => {
                             <li><Link to="/privacy" className="">Políticas de Privacidad</Link></li>
                             <li><Link to="/contact" className="">Contacto</Link></li>
                             <li><Link to='/about'>About</Link></li>
-                            <li><Link to='/rid'>Eliminar</Link></li>
+                            <li><Link to='/CRUDPage'>Eliminar</Link></li>
                         </ul>
                     </nav>
                     <span><Link to='/'>logo</Link></span>
