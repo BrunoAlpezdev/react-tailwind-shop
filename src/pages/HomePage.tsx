@@ -1,23 +1,20 @@
 import { CarouselComponent } from '../components/CarouselComponent'
 import ProductCardComponent from '../components/ProductCardComponent.tsx'
 import productsList from '../data/productsList.ts'
-import FooterComponent from '../components/FooterComponent.tsx'
 
 export default function HomePage() {
 
     return (
-      <div>
-      <section className=''>
+      <main>
+        
         <CarouselComponent />
-      </section>
-      <section className='flex justify-between mt-6 mb-4pt-8 pb-12'>
-        {productsList.map((product) => (
-          <ProductCardComponent key={product.idProducto} idProducto={product.idProducto} imagen={product.imagen} nombreProducto={product.nombreProducto} descripcion={product.descripcion} categoria={product.categoria} />
-        ))}
-      </section>
-      <section className='xd'>
-      <FooterComponent />
-      </section>
-      </div>
+
+        <section className='flex justify-between mt-6 mb-4pt-8 pb-12'>
+          {productsList.map((product) => (
+            <ProductCardComponent key={product.idProducto} idProducto={product.idProducto} imagen={product.imagen} nombreProducto={product.nombreProducto} descripcion={product.descripcion} categoria={product.categoria} />
+          ))}
+        </section>
+
+      </main>
     )
 }

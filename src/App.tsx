@@ -13,11 +13,10 @@ import NotFoundPage from './pages/NotFoundPage.tsx';
 
 function App() {
   return (
-    <>
-    <div className='flex flex-col min-h-screen'>
+    <div className='body-container'>
+
       <NavbarComponent />
       
-      <section className='pt-8 pb-12'>
       <AnimatePresence mode='wait'>
         <Routes>
           <Route index element={<HomePage />} />
@@ -30,13 +29,11 @@ function App() {
           {/* ... */}
         </Routes>
       </AnimatePresence>
-      </section>
-    </div>
 
-    <section className='xd'>
+
       <FooterComponent />
-    </section>
-  </>
+
+    </div>
   )
 }
 

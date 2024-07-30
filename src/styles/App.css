@@ -1,6 +1,4 @@
 body {
-  position: relative;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -40,14 +38,8 @@ Despues de hacer el css, investiguen como pasar los cambios con tailwindcss a lo
 
 */
 
-
-/*incio del css del footer*/
-.footer-bar {
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  color: white;
+.body-container {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
-/*fin del css del footer*/

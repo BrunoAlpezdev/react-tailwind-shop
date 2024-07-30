@@ -10,21 +10,17 @@ const Footer: React.FC<Props> = (props) => {
     // Lógica del componente
 
     return (
-        <div className='footer-bar'>
-            <footer className="w-full bg-gray-800 text-white">
-                <div className="max-w-screen-xl mx-auto py-4 px-5 flex justify-between items-center">
-                    <nav>
-                        <ul className="flex space-x-4">
-                            <li><Link to="/privacy" className="">Políticas de Privacidad</Link></li>
-                            <li><Link to="/contact" className="">Contacto</Link></li>
-                            <li><Link to='/about'>About</Link></li>
-                            <li><Link to='/CRUDPage'>Eliminar</Link></li>
-                        </ul>
-                    </nav>
-                    <span><Link to='/'>logo</Link></span>
-                </div>
-            </footer>
-        </div>
+        <footer className="bg-blue-gray-700 text-white flex content-center justify-between px-8 py-4">
+            <nav>
+                <ul className="flex gap-6">
+                    <li><Link to="/privacy" className="">Políticas de Privacidad</Link></li>
+                    <li><Link to="/contact" className="">Contacto</Link></li>
+                    <li><Link to='/about'>About</Link></li>
+                    <li><Link to='/CRUDPage'>Eliminar</Link></li>
+                </ul>
+            </nav>
+            <span><Link to='/'>logo</Link></span>
+        </footer>
     );
 };
 
