@@ -14,25 +14,20 @@ import NotFoundPage from './pages/NotFoundPage.tsx';
 function App() {
   return (
     <div className='body-container'>
-
-      <NavbarComponent />
-      
       <AnimatePresence mode='wait'>
-        <Routes>
-          <Route index element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/politicas" element={<AboutPage />} />
-          <Route path="/contacto" element={<AboutPage />} />
-          <Route path="/CRUDPage" element={<CRUDPage />} />
-          <Route path="/producto/:idProducto" element={<ProductPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-          {/* ... */}
-        </Routes>
+          <NavbarComponent />
+          <Routes>
+            <Route index element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/politicas" element={<AboutPage />} />
+            <Route path="/contacto" element={<AboutPage />} />
+            <Route path="/CRUDPage" element={<CRUDPage />} />
+            <Route path="/producto/:idProducto" element={<ProductPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+            {/* ... */}
+          </Routes>
+        <FooterComponent />
       </AnimatePresence>
-
-
-      <FooterComponent />
-
     </div>
   )
 }

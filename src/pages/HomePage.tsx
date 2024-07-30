@@ -7,13 +7,13 @@ export default function HomePage() {
     return (
       <main>
         
-        <CarouselComponent />
-
-        <section className='flex justify-between mt-6 mb-4pt-8 pb-12'>
+        <section className='flex justify-center gap-6 mt-6 mb-4'>
           {productsList.map((product) => (
             <ProductCardComponent key={product.idProducto} idProducto={product.idProducto} imagen={product.imagen} nombreProducto={product.nombreProducto} descripcion={product.descripcion} categoria={product.categoria} />
           ))}
         </section>
+
+        <CarouselComponent />
 
       </main>
     )

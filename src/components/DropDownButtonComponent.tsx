@@ -1,7 +1,8 @@
 import React from "react";
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
 import '../styles/App.css'
-interface Props {
+
+type Props = {
     nombreBoton: string;
     categorias: string[];
 }
@@ -9,14 +10,17 @@ interface Props {
 const DropDownButtonComponent: React.FC<Props> = (props) => {
     return (
         <Dropdown>
-            <DropdownTrigger>
-                <Button>{props.nombreBoton}</Button>
-            </DropdownTrigger>
-            <DropdownMenu>
-                {props.categorias.map((categoria, index) => (
-                    <DropdownItem key={index}>{categoria}</DropdownItem>
-                ))}
-            </DropdownMenu>
+                <DropdownTrigger>
+                    <Button className="rounded-full">{props.nombreBoton}</Button>
+                </DropdownTrigger>
+
+                <DropdownMenu>
+
+                    {props.categorias.map((categoria, index) => (
+                        <DropdownItem key={index}>{categoria}</DropdownItem>
+                    ))}
+
+                </DropdownMenu>
         </Dropdown>
     );
     };
