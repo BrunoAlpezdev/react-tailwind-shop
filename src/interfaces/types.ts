@@ -7,6 +7,12 @@ export type products = {
 }
 
 export type Category = {
+    idCategoria: string,
     nombreBoton: string,
-    categorias: string[]
+    categorias: subCategories[]
+}
+
+export type subCategories = {
+    idSubCategoria: string,
+    nombreSubCategoria: string
 }
