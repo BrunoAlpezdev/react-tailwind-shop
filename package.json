@@ -39,5 +39,24 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
     "vite-tsconfig-paths": "^4.3.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "./node_modules/@vitejs/plugin-react-swc/dist/eslint.js"
+    ],
+    "plugins": [
+      "react-hooks",
+      "react-refresh"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react-refresh/no-scope": "error"
+    }
   }
+
 }
