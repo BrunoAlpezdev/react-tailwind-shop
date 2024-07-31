@@ -10,10 +10,10 @@ import ProductPage from "./pages/ProductPage";
 import CRUDPage from './pages/CRUDPage.tsx';
 import NotFoundPage from './pages/NotFoundPage.tsx';
 
-
 function App() {
+
   return (
-    <div className='body-container'>
+    <div className='body-container bg-brand-light-shades text-brand-dark-shades dark:bg-brand-dark-shades dark:text-brand-light-shades'>
       <AnimatePresence mode='wait'>
           <NavbarComponent />
           <Routes>

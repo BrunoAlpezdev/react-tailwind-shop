@@ -30,6 +30,13 @@ const Config = {
           Read: '#7ed0ec',
           Update: '#a1a1a1',
           Delete: '#e84a4a',
+        },
+        'brand' : {
+          'light-shades':'#FCFAFB',
+          'light-accent':'#EC9A94',
+          'main':'#0D6E6E',
+          'dark-accent':'#FF3D3D',
+          'dark-shades':'#332329',
         }
       },
     },
