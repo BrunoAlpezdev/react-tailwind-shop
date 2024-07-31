@@ -1,7 +1,10 @@
 import '../styles/App.css'
 import { useEffect, useState } from "react";
+import { LightThemeIcon, DarkThemeIcon } from './Icons.tsx';
 import DropDownButtonComponent from "./DropDownButtonComponent"
 import categoriesList from '../data/categoriesList.ts'
+import { Link } from 'react-router-dom';
+import ImageComponent from './ImageComponent.tsx';
 
 export function NavbarComponent() {
 
@@ -27,18 +30,24 @@ export function NavbarComponent() {
     };
 
     return (
-        <div className="flex justify-between items-center px-4 py-2 bg-brand-dark-shades text-brand-light-shades dark:bg-brand-light-shades dark:text-brand-dark-shades">
+        <header className="relative">
+            <div className="absolute -inset-y-1 inset-x-0 bg-brand-dark-shades dark:bg-brand-main-700 blur-sm"></div>
+            <div className="relative flex justify-between items-center px-4 py-2 bg-brand-dark-shades text-brand-light-shades dark:bg-brand-main-700">
                 <section>
-                    <img src="https://cdn.discordapp.com/avatars/434778524621209610/a_bf9674e6d311743d413aa1f7f75a43cf?size=1024" alt="" className="w-16 h-16 rounded-lg" />
+                    <Link to='/'><ImageComponent imageUrl='https://cdn.discordapp.com/avatars/434778524621209610/a_bf9674e6d311743d413aa1f7f75a43cf?size=1024' size='60'/></Link>
                 </section>
                 <section>
                     <div className="flex gap-3">
-                        {categoriesList.map((category, index) => (
-                            <DropDownButtonComponent key={index} nombreBoton={category.nombreBoton} categorias={category.categorias}/>
+                        {categoriesList.map((category) => (
+                            <DropDownButtonComponent key={category.idCategoria} nombreBoton={category.nombreBoton} categorias={category.categorias}/>
                         ))}
-                        <button onClick={handleToggleTheme} className=''>Lunita O solsito</button>
+                        {theme === 'light' 
+                        ?<button onClick={handleToggleTheme} className='transition hover:scale-110'><LightThemeIcon width={24} height={24} color='#EC9A94' /></button> 
+                        :<button onClick={handleToggleTheme} className='transition hover:scale-110'><DarkThemeIcon width={24} height={24} color='#FF3D3D' /></button>
+                    }
                     </div>
                 </section>
-        </div>
+            </div>
+        </header>
     )
 }

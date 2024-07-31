@@ -116,3 +116,61 @@ export const DeleteIcon = (props: IconProps) => (
     </svg>
 )
 
+export const LightThemeIcon = (props: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    width={props.width || 24}
+    height={props.width || 24}
+    stroke={props.color || "#000"}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <g stroke={props.color || "#000"} strokeWidth={1.5}>
+      <circle cx={12} cy={12} r={5} />
+      <path
+        strokeLinecap="round"
+        d="M12 2v2M12 20v2M4 12H2M22 12h-2M19.778 4.223l-2.222 2.031M4.222 4.223l2.222 2.031M6.444 17.556l-2.222 2.222M19.778 19.777l-2.222-2.222"
+      />
+    </g>
+  </svg>
+)
+
+export const DarkThemeIcon = (props: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.width || 24}
+    height={props.width || 24}
+    stroke={props.color || "#000"}
+    strokeWidth={4}
+    viewBox="-4.8 -4.8 57.6 57.6"
+    {...props}
+  >
+    <path
+      d="M32.8 29.3c-8.9-.8-16.2-7.8-17.5-16.6-.3-1.8-.3-3.7 0-5.4.2-1.4-1.4-2.3-2.5-1.6C6.3 9.7 2.1 16.9 2.5 25c.5 10.7 9 19.5 19.7 20.4 10.6.9 19.8-6 22.5-15.6.4-1.4-1-2.6-2.3-2-2.9 1.3-6.1 1.8-9.6 1.5Z"
+      style={{
+        fill: "none",
+        stroke: props.color || "#000",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+      }}
+    />
+  </svg>
+)
+
+export const SearchIcon = (props: IconProps) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 24 24" 
+    strokeWidth={1.5} 
+    stroke="#fff"
+    width={props.width || 24}
+    height={props.height || 24}
+    {...props}
+    >
+
+  <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+</svg>
+
+)

@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className='body-container bg-brand-light-shades text-brand-dark-shades dark:bg-brand-dark-shades dark:text-brand-light-shades'>
-      <AnimatePresence mode='wait'>
+      <AnimatePresence mode='sync'>
           <NavbarComponent />
           <Routes>
             <Route index element={<HomePage />} />
