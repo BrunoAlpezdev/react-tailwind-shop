@@ -10,20 +10,10 @@
 /* scrollbar */
 
 ::-webkit-scrollbar{
-    width: 3px;
+    display: none;
 }
 
-::-webkit-scrollbar-thumb{
-    background: #ffc4c4;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-track{
-    background: none;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-track:hover{
-    background: rgba(rgb(0, 0, 0), 0.1);
-    border-radius: 4px;
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }

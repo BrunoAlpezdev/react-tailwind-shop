@@ -1,6 +1,8 @@
-import {Card, Button, CardHeader} from "@nextui-org/react";
+import {Card} from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
+import { CartIcon, CashIcon } from "./Icons";
+import { ButtonWithState } from "./ButtonWithState.Component";
 
 type ProductCardComponentProps = {
     idProducto: string,
@@ -11,7 +13,7 @@ type ProductCardComponentProps = {
 }
 
 const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
-
+    
     const comprarClick = () => {
         console.log("Comprar");
     };
@@ -42,25 +44,13 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
             {/* Se le pasa el path al link para que pueda redirigir a la pagina de producto en especifico */}
             <Link to={path}>
                 <div>
-                    <CardHeader className=" text-white pb-0 pt-0 flex-col items-center">
-                        <p className="text-lg uppercase ">{props.nombreProducto}</p>
-                    </CardHeader>
                     <motion.img layoutId={uniqueLayoutId} alt="main product card" className="object-cover w-52 h-52 rounded-2xl" src={props.imagen} />
                 </div>
             </Link>
 
-            <section className="flex justify-between border border-white/20 bg-black/60 backdrop-blur-sm bottom-3 absolute rounded-xl py-1 w-[calc(100%-24px)] shadow-small ml-1 z-10">
-
-                {/* Aquí se puede agregar un icono de carrito de compras */}
-
-                <Button onPress={comprarClick} className="flex-1 text-xs text-white bg-primary/60 font-normal mx-1 hover:skew-x-12" variant="flat" radius="lg" size="sm">
-                    Comprar Ahora {/* Estos Componentes tienen en el estilo un "skew" esto hace que se vea como ladeado el boton y el texto, en caso de no gustar, se retira nomas */}
-                </Button>
-
-                <Button onPress={agregarCarritoClick} className="flex-1 text-xs text-black bg-success/60 font-normal mx-1 hover:bg-success/100" variant="flat" radius="lg" size="sm">
-                    Agregar al carrito {/* Estos Componentes tienen en el estilo un "skew" esto hace que se vea como ladeado el boton y el texto, en caso de no gustar, se retira nomas */}
-                </Button>
-                
+            <section className="flex justify-between border border-white/20 bg-black/60 backdrop-blur-sm  bottom-3 absolute rounded-xl py-1 w-[calc(100%-24px)] shadow-small ml-1 z-10 p-1 gap-2">
+                <ButtonWithState Icon={<CashIcon />} onClick={comprarClick} bgHoverColor="bg-primary/60" />                
+                <ButtonWithState Icon={<CartIcon />} onClick={agregarCarritoClick} bgHoverColor="bg-success/60"/>
             </section>
             
         </Card>
