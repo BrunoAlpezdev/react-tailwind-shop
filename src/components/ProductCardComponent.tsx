@@ -42,8 +42,8 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
             {/* Se le pasa el path al link para que pueda redirigir a la pagina de producto en especifico */}
             <Link to={path}>
                 <div>
-                    <CardHeader className=" text-white pb-0 pt-2 px-4 flex-col items-center">
-                        <p className="text-xl uppercase font-medium">{props.nombreProducto}</p>
+                    <CardHeader className=" text-white pb-0 pt-0 flex-col items-center">
+                        <p className="text-lg uppercase ">{props.nombreProducto}</p>
                     </CardHeader>
                     <motion.img layoutId={uniqueLayoutId} alt="main product card" className="object-cover w-52 h-52 rounded-2xl" src={props.imagen} />
                 </div>
