@@ -1,7 +1,7 @@
 import '@styles/App.css'
 import { useEffect, useState } from "react";
 import { LightThemeIcon, DarkThemeIcon, BrandLogo } from '@components/IconsComponent';
-import { DropDownButton, ImageComponent } from '@components/index';
+import { DropDownButton } from '@components/index';
 import { Link } from 'react-router-dom';
 import categoriesList from '@data/categoriesList'
 

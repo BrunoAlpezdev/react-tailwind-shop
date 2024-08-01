@@ -8,9 +8,9 @@ import { HomePage, AboutPage, ProductPage, CRUDPage, NotFoundPage } from './page
 function App() {
 
   return (
-    <div className='body-container bg-brand-light-shades text-brand-dark-shades dark:bg-brand-dark-shades dark:text-brand-light-shades'>
+    <div className='bg-brand-light-shades text-brand-dark-shades dark:bg-brand-dark-shades dark:text-brand-light-shades'>
       <AnimatePresence mode='sync'>
-        <div>
+        <div className='body-container'>
           <NavbarComponent />
           <Routes>
             <Route index element={<HomePage />} />
@@ -22,7 +22,7 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
             {/* ... */}
           </Routes>
-          <FooterComponent />
+        <FooterComponent />
         </div>
       </AnimatePresence>
     </div>
