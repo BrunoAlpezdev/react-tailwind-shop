@@ -1,6 +1,6 @@
 import '../styles/App.css'
 import { useEffect, useState } from "react";
-import { LightThemeIcon, DarkThemeIcon } from './Icons.tsx';
+import { LightThemeIcon, DarkThemeIcon } from './Icons.Component.tsx';
 import { Link } from 'react-router-dom';
 import { DropDownButton } from "./Buttons.Component.tsx"
 import categoriesList from '../data/categoriesList.ts'

@@ -1,4 +1,4 @@
-import  { CreateIcon, DeleteIcon, ReadIcon, UpdateIcon, SearchIcon }  from "../components/Icons"
+import  { CreateIcon, DeleteIcon, ReadIcon, UpdateIcon, SearchIcon }  from "../components/Icons.Component"
 import { CRUDButton } from '../components/Buttons.Component'
 import productsList from "../data/productsList"
 
