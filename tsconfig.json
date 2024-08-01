@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./", // Ajusta esto según la ubicación de tu tsconfig
     "paths": {
       "@components/*": ["src/components/*"],
