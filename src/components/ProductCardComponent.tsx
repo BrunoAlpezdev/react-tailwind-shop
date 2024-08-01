@@ -1,7 +1,7 @@
 import {Card} from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
-import { CartIcon, CashIcon } from "./Icons.Component";
+import { CartIcon, CashIcon } from "./IconsComponent";
 import { ButtonWithState } from "./Buttons.Component";
 
 type ProductCardComponentProps = {

@@ -1,12 +1,11 @@
-import '../styles/App.css'
+import '@styles/App.css'
 import { useEffect, useState } from "react";
-import { LightThemeIcon, DarkThemeIcon } from './Icons.Component.tsx';
+import { LightThemeIcon, DarkThemeIcon } from '@components/IconsComponent';
+import { DropDownButton, ImageComponent } from '@components/index';
 import { Link } from 'react-router-dom';
-import { DropDownButton } from "./Buttons.Component.tsx"
-import categoriesList from '../data/categoriesList.ts'
-import ImageComponent from './ImageComponent.tsx';
+import categoriesList from '@data/categoriesList'
 
-export function NavbarComponent() {
+const NavbarComponent = () => {
 
     const [theme, setTheme] = useState( () => {
         if (window.matchMedia('(prefers-color-scheme: light)').matches) {
@@ -51,3 +50,5 @@ export function NavbarComponent() {
         </header>
     )
 }
+
+export default NavbarComponent;

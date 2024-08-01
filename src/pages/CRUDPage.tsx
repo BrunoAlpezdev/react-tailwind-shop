@@ -1,6 +1,6 @@
-import  { CreateIcon, DeleteIcon, ReadIcon, UpdateIcon, SearchIcon }  from "../components/Icons.Component"
-import { CRUDButton } from '../components/Buttons.Component'
-import productsList from "../data/productsList"
+import { CreateIcon, DeleteIcon, ReadIcon, UpdateIcon, SearchIcon }  from "@components/IconsComponent"
+import { CRUDButton } from '@components/index'
+import productsList from "@data/productsList"
 
 export default function CRUDPage() {
 

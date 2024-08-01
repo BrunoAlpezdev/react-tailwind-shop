@@ -1,6 +1,7 @@
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { subCategories } from "../interfaces/types";
+import '@styles/CRUD.css'
 
 type ButtonWithStateProps = {
     Icon: React.JSX.Element

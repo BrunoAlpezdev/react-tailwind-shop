@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import '../styles/App.css'
-import ImageComponent from './ImageComponent';
+import '@styles/App.css'
+import { ImageComponent } from '@components/index';
 
 const Footer = () => {
     // Lógica del componente

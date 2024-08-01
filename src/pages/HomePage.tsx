@@ -1,6 +1,5 @@
-import { CarouselComponent } from '../components/CarouselComponent'
-import ProductCardComponent from '../components/ProductCardComponent.tsx'
-import productsList from '../data/productsList.ts'
+import { CarouselComponent, ProductCardComponent } from '@components/index'
+import productsList from '@data/productsList'
 
 export default function HomePage() {
 

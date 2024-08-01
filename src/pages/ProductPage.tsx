@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import products from '../data/productsList';
+import products from '@data/productsList';
 
 export default function ProductPage() {
     const { idProducto } = useParams();
