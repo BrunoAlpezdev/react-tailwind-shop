@@ -1,9 +1,9 @@
 import '../styles/App.css'
 import { useEffect, useState } from "react";
 import { LightThemeIcon, DarkThemeIcon } from './Icons.tsx';
-import DropDownButtonComponent from "./DropDownButtonComponent"
-import categoriesList from '../data/categoriesList.ts'
 import { Link } from 'react-router-dom';
+import { DropDownButton } from "./Buttons.Component.tsx"
+import categoriesList from '../data/categoriesList.ts'
 import ImageComponent from './ImageComponent.tsx';
 
 export function NavbarComponent() {
@@ -39,7 +39,7 @@ export function NavbarComponent() {
                 <section>
                     <div className="flex gap-3">
                         {categoriesList.map((category) => (
-                            <DropDownButtonComponent key={category.idCategoria} nombreBoton={category.nombreBoton} categorias={category.categorias}/>
+                            <DropDownButton key={category.idCategoria} nombreBoton={category.nombreBoton} categorias={category.categorias}/>
                         ))}
                         {theme === 'light' 
                         ?<button onClick={handleToggleTheme} className='transition hover:scale-110'><LightThemeIcon width={24} height={24} color='#EC9A94' /></button> 

@@ -1,13 +1,8 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/App.css'
 import ImageComponent from './ImageComponent';
 
-interface Props {
-    // Propiedades del componente
-}
-
-const Footer: React.FC<Props> = (props) => {
+const Footer = () => {
     // Lógica del componente
 
     return (
