@@ -40,7 +40,7 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
 
   return (
     <motion.div className="max-w-fit">
-        <Card isFooterBlurred radius="lg" className="border-none dark:bg-brand-light-shades bg-brand-dark-shades/60 p-2">
+        <Card isFooterBlurred radius="lg" className="border-none  bg-brand-dark-shades/60 dark:bg-brand-light-shades/60 p-2">
             {/* Se le pasa el path al link para que pueda redirigir a la pagina de producto en especifico */}
             <Link to={path}>
                 <div>
@@ -48,9 +48,9 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
                 </div>
             </Link>
 
-            <section className="flex justify-between border border-white/20 bg-brand-dark-shades/60 dark:bg-brand-light-shades/60 backdrop-blur-sm bottom-3 absolute rounded-xl py-1 w-[calc(100%-24px)] shadow-small ml-1 z-10 p-1 gap-2">
-                <ButtonWithState Icon={<CashIcon />} onClick={comprarClick} bgHoverColor="bg-primary/60" />                
-                <ButtonWithState Icon={<CartIcon />} onClick={agregarCarritoClick} bgHoverColor="bg-success/60"/>
+            <section className="flex justify-between border border-white/20 bg-brand-dark-shades/60 dark:bg-brand-light-shades/60 backdrop-blur-sm bottom-3 absolute rounded-xl py-1 w-[calc(100%-24px)] shadow-small ml-1 z-10 p-1 gap-1">
+                <ButtonWithState Icon={<CashIcon />} onClick={comprarClick} />                
+                <ButtonWithState Icon={<CartIcon />} onClick={agregarCarritoClick} />
             </section>
             
         </Card>

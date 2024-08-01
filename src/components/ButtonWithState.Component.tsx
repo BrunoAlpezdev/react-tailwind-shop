@@ -23,8 +23,8 @@ export const ButtonWithState: React.FC<ButtonWithStateProps> = (props) => {
     return (
       <button
         className={`z-0 group relative inline-flex items-center transform justify-center select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent px-3 min-w-16 h-8 gap-2 rounded-large [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground flex-1 text-xs ${
-          isPressed ? 'scale-[0.97]' : ''
-        } ${isHovered ? props.bgHoverColor : ''}`}
+          isPressed ? 'scale-90' : ''
+        } ${isHovered ? 'bg-brand-dark-accent/60 dark:bg-brand-light-accent-600/60' : ''}`}
         data-pressed={isPressed}
         data-hover={isHovered}
         onMouseDown={() => setIsPressed(true)}
