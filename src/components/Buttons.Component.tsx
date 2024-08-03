@@ -21,7 +21,7 @@ type CartButtonProps = {
     onClick?: () => void
 }
 
-interface CRUDButtonProps {
+type CRUDButtonProps = {
     bgColor?: string;
     Icon: React.JSX.Element;
     productId?: string;
@@ -57,11 +57,9 @@ export const DropDownButton: React.FC<DropDownButtonProps> = (props) => {
                 </DropdownTrigger>
 
                 <DropdownMenu>
-
                     {props.categorias.map((categoria) => (
                         <DropdownItem key={categoria.idSubCategoria}>{categoria.nombreSubCategoria}</DropdownItem>
                     ))}
-
                 </DropdownMenu>
         </Dropdown>
     );
