@@ -29,6 +29,48 @@ const productsList: products[] = [
         descripcion: 'desc',
         categoria: 'destacado'
     },
+    {
+        idProducto: '5',
+        imagen: 'https://www.futuro.cl/wp-content/uploads/2019/07/slayer-polera-1024x1014.jpg',
+        nombreProducto: 'Polera Hedionda',
+        descripcion: 'desc',
+        categoria: 'destacado'
+    },
+    {
+        idProducto: '6',
+        imagen: 'https://www.futuro.cl/wp-content/uploads/2019/07/slayer-polera-1024x1014.jpg',
+        nombreProducto: 'Polera Hedionda',
+        descripcion: 'desc',
+        categoria: 'destacado'
+    },
+    {
+        idProducto: '7',
+        imagen: 'https://www.futuro.cl/wp-content/uploads/2019/07/slayer-polera-1024x1014.jpg',
+        nombreProducto: 'Polera Hedionda',
+        descripcion: 'desc',
+        categoria: 'destacado'
+    },
+    {
+        idProducto: '8',
+        imagen: 'https://www.futuro.cl/wp-content/uploads/2019/07/slayer-polera-1024x1014.jpg',
+        nombreProducto: 'Polera Hedionda',
+        descripcion: 'desc',
+        categoria: 'destacado'
+    },
+    {
+        idProducto: '9',
+        imagen: 'https://www.futuro.cl/wp-content/uploads/2019/07/slayer-polera-1024x1014.jpg',
+        nombreProducto: 'Polera Hedionda',
+        descripcion: 'desc',
+        categoria: 'destacado'
+    },
+    {
+        idProducto: '10',
+        imagen: 'https://www.futuro.cl/wp-content/uploads/2019/07/slayer-polera-1024x1014.jpg',
+        nombreProducto: 'Polera Hedionda',
+        descripcion: 'desc',
+        categoria: 'destacado'
+    }
 ]
 
 export default productsList

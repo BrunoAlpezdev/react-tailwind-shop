@@ -11,9 +11,6 @@ export default function HomePage() {
             <ProductCardComponent key={product.idProducto} idProducto={product.idProducto} imagen={product.imagen} nombreProducto={product.nombreProducto} descripcion={product.descripcion} categoria={product.categoria} />
           ))}
         </section>
-
-        <CarouselComponent />
-
       </main>
     )
 }

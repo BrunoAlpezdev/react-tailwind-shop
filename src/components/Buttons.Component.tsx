@@ -1,7 +1,8 @@
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 import { useState } from "react";
 import { subCategories } from "../interfaces/types";
 import '@styles/CRUD.css'
+import '@styles/Components.css'
 
 type ButtonWithStateProps = {
     Icon: React.JSX.Element
@@ -26,6 +27,8 @@ type CRUDButtonProps = {
     Icon: React.JSX.Element;
     productId?: string;
 }
+
+
 
 export const ButtonWithState: React.FC<ButtonWithStateProps> = (props) => {
     const [isPressed, setIsPressed] = useState(false);
@@ -95,3 +98,16 @@ export const CRUDButton: React.FC<CRUDButtonProps> = (props) => {
         </div>
     );
 };
+
+export const DropDownProfile = () => {
+    return (
+        <div className="flex flex-col DropDownProfile">
+            <ul className="flex flex-col gap-4">
+                <li>Mi Cuenta</li>
+                <li>Mis Pedidos</li>
+                <li>Favoritos</li>
+                <li>Cerrar sesion</li>
+            </ul>
+        </div>
+    )
+}

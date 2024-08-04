@@ -1,0 +1,27 @@
+/* dropdown del menu*/
+.DropDownProfile {
+    z-index: 100;
+    position: absolute;
+    top: 5.4rem;
+    right: 0rem; 
+    width: 10vw;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.DropDownProfile::before{
+  content: '';
+  position: absolute;
+  top: -0.7rem;
+  right: 1.1rem;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: black;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+}
+  /* fin dropwdow*/

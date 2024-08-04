@@ -1,4 +1,58 @@
+/* body crud */
+.main_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(https://rare-gallery.com/uploads/posts/551214-blue-clouds.jpg) center / cover ;
+}
+/* Tabla Crud */
 
+/* 
+td img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+
+  object-fit: scale-down;
+}
+
+table, th, td {
+  padding: 1rem;
+}
+
+main.table{
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: #fff5;
+
+  backdrop-filter: blur(7px);
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 5px;
+  overflow: hidden ;
+}
+
+.table_header {
+  width: 100%;
+  height: 10%;
+  background-color: #fff5;
+  padding: .5rem 1rem;
+}
+
+.table_body{
+  width: 95%;
+  max-height: calc(89% - .8rem);
+  background-color: #fffb;
+  margin: .8rem auto;
+  border-radius: .6rem;
+
+  overflow: scroll;
+}
+ */
+
+
+/* Botones de acción */
 .button-hover-effect {
   position: relative;
   overflow: hidden;

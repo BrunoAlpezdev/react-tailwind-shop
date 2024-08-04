@@ -11,33 +11,6 @@ code {
     monospace;
 }
 
-/*
-------------------------------------Esto--------------------------------
-.menu-bar-container {
-    display: flex;
-    justify-content: flex-start; 
-    margin-right: 380px;
-  }
-  
-  .menu-bar-item{
-    margin-right: 40px;
-  }
-  
-  .menu-bar-item:last-child {
-    margin-right: 40px;
-  }
-  
-  .nbmenu {
-    height: 300px
-}
-----------------------------Es reemplazado por---------------------------
-
-<div className="flex menu-bar-container gap-12"> en el archivo src/components/NavBarComponent.tsx
-
-Despues de hacer el css, investiguen como pasar los cambios con tailwindcss a los componentes de react así nos ahorramos codigo y se aprende a usar tailwindcss
-
-*/
-
 .body-container {
   min-height: 100dvh;
   display: grid;

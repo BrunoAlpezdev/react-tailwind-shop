@@ -1,5 +1,4 @@
 import '@styles/App.css'
-import '@styles/Carousel.css'
 import { NavbarComponent, FooterComponent } from '@base/index';
 import { Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
