@@ -36,7 +36,7 @@ const NavbarComponent = () => {
                             ?<button onClick={handleToggleTheme} className='transition hover:scale-110'><LightThemeIcon width={24} height={24} color='#EC9A94' /></button> 
                             :<button onClick={handleToggleTheme} className='transition hover:scale-110'><DarkThemeIcon width={24} height={24} color='#FF3D3D' /></button>}
                         </section>
-                        <section className='animate-spin'>
+                        <section className=''>
                             {
                                 openProfile && <DropDownProfile />
                             }
