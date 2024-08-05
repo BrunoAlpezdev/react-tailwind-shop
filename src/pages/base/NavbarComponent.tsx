@@ -1,6 +1,6 @@
 import '@styles/App.css'
 import { LightThemeIcon, DarkThemeIcon, BrandLogo } from '@components/IconsComponent';
-import { DropDownButton,DropDownProfile} from '@components/index';
+import { DropDownButton, DropDownProfile} from '@components/index';
 import { Link } from 'react-router-dom';
 import categoriesList from '@data/categoriesList'
 import useThemeHandler from 'src/hooks/useThemeHandler';

@@ -1,8 +1,33 @@
-import CRUDTableComponent from "@components/CRUDTableComponent"
+import { Columns, DataTable } from "@/components"
+import productsList from "@/data/productsList"
+import { products } from "@/interfaces/types"
+import {CRUDTableComponent}  from "@components/CRUD/CRUDTableComponent"
 import { CreateIcon, SearchIcon }  from "@components/IconsComponent"
 import '@styles/CRUD.css'
+import { useEffect, useState } from "react"
 
-export default function CRUDPage() {
+function CRUDPage() {
+
+  const [data, setData] = useState<products[]>([])
+
+  function getData() {
+    const originalData = productsList.map((product) => ({
+      idProducto: product.idProducto,
+      imagen: product.imagen,
+      nombreProducto: product.nombreProducto,
+      descripcion: product.descripcion,
+      categoria: product.categoria
+    }))
+    return originalData
+  }
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getData();
+      setData(data);
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="main_body p-4">
@@ -12,10 +37,12 @@ export default function CRUDPage() {
         <button className='transition hover:scale-150 hover:border-teal-500'><CreateIcon width={30} height={30}/></button>
       </section>
       
-      <section>
-        <CRUDTableComponent />
-      </section>
+      <div className="container mx-auto py-10">
+        <DataTable  columns={Columns} data={data} />
+      </div>
 
     </div>
   )
 }
+
+export default CRUDPage
