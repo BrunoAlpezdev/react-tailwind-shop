@@ -12,7 +12,8 @@
       "@styles/*": ["src/styles/*"],
       "@pages/*": ["src/pages/*"],
       "@base/*": ["src/pages/base/*"],
-      "@data/*": ["src/data/*"]
+      "@data/*": ["src/data/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "jsx": "react-jsx", // Si usas React 17+
     "strict": true // Habilita el modo estricto, opcional

@@ -14,6 +14,7 @@ export default defineConfig({
       '@pages': resolve(__dirname, 'src/pages'),
       '@base': resolve(__dirname, 'src/pages/base'),
       '@data': resolve(__dirname, 'src/data'),
+      '@utils': resolve(__dirname, 'src/utils'),
     },
   },
 })
