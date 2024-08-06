@@ -70,6 +70,13 @@ const productsList: products[] = [
         nombreProducto: 'Polera Hedionda',
         descripcion: 'desc',
         categoria: 'destacado'
+    },
+    {
+        idProducto: '11',
+        imagen: 'https://www.futuro.cl/wp-content/uploads/2019/07/slayer-polera-1024x1014.jpg',
+        nombreProducto: 'Polera Hedionda',
+        descripcion: 'desc',
+        categoria: 'destacado'
     }
 ]
 

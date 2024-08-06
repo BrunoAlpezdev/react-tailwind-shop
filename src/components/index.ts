@@ -6,3 +6,4 @@ export { ButtonWithState, DropDownButton, CartButton, CRUDButton, DropDownProfil
 export { CreateIcon, DeleteIcon, ReadIcon, UpdateIcon, SearchIcon } from './IconsComponent';
 export { DataTable } from './CRUD/DataTable';
 export { Columns } from './CRUD/Columns';
+export { AvatarComponent } from './AvatarComponent'
