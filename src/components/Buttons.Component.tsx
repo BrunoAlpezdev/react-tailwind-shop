@@ -3,7 +3,7 @@ import {
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
-  Button,
+  Button
 } from '@nextui-org/react'
 import { useState } from 'react'
 import { subCategories } from '../interfaces/types'
@@ -54,8 +54,7 @@ export const ButtonWithState: React.FC<ButtonWithStateProps> = (props) => {
       onMouseUp={() => setIsPressed(false)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={props.onClick}
-    >
+      onClick={props.onClick}>
       {props.Icon}
     </button>
   )
@@ -103,8 +102,7 @@ export const CRUDButton: React.FC<CRUDButtonProps> = (props) => {
           onClick={ReadClick}
           className={
             'button-hover-effect before:bg-icons-Read p-2 rounded-l-[96px] transition relative'
-          }
-        >
+          }>
           <span>{props.Icon}</span>
         </button>
       )}
@@ -113,8 +111,7 @@ export const CRUDButton: React.FC<CRUDButtonProps> = (props) => {
           onClick={UpdateClick}
           className={
             'button-hover-effect before:bg-icons-Update p-2 transition relative'
-          }
-        >
+          }>
           <span>{props.Icon}</span>
         </button>
       )}
@@ -123,8 +120,7 @@ export const CRUDButton: React.FC<CRUDButtonProps> = (props) => {
           onClick={DeleteClick}
           className={
             'button-hover-effect before:bg-icons-Delete rounded-r-[96px] p-2 transition relative'
-          }
-        >
+          }>
           <span>{props.Icon}</span>
         </button>
       )}

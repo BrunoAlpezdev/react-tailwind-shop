@@ -1,6 +1,5 @@
 export const CarouselComponent = () => {
-    return (
-    
+  return (
     <div className="container">
       <div>
         <div className="content">
@@ -27,5 +26,5 @@ export const CarouselComponent = () => {
         </div>
       </div>
     </div>
-    );
-    }
+  )
+}
