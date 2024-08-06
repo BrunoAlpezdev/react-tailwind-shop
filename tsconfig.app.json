@@ -15,7 +15,7 @@
       "@pages/*": ["src/pages/*"],
       "@base/*": ["src/pages/base/*"],
       "@data/*": ["src/data/*"],
-      "@utils/*": ["src/utils/*"]
+      "@services/*": ["src/services/*"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",

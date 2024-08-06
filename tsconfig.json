@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
@@ -13,11 +17,10 @@
       "@pages/*": ["src/pages/*"],
       "@base/*": ["src/pages/base/*"],
       "@data/*": ["src/data/*"],
-      "@utils/*": ["src/utils/*"]
+      "@services/*": ["src/services/*"]
     },
     "jsx": "react-jsx", // Si usas React 17+
     "strict": true // Habilita el modo estricto, opcional
   },
-  "include": ["src/**/**/*"], 
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": ["src/**/**/*"]
 }
