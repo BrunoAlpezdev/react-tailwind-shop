@@ -137,7 +137,7 @@ export const DropDownProfile = () => {
     <div className="flex flex-col DropDownProfile">
       <ul className="flex flex-col gap-4">
         <li>
-          <Link to="/Cuenta">Mi Cuenta</Link>
+          <Link to="/CuentaPage">Mi Cuenta</Link>
         </li>
         <li>Mis Pedidos</li>
         <li>Favoritos</li>
