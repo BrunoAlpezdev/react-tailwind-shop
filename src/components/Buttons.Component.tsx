@@ -64,7 +64,7 @@ export const DropDownButton: React.FC<DropDownButtonProps> = (props) => {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button className="rounded-full">{props.nombreBoton}</Button>
+        <Button className='rounded-full'>{props.nombreBoton}</Button>
       </DropdownTrigger>
 
       <DropdownMenu>
@@ -130,10 +130,10 @@ export const CRUDButton: React.FC<CRUDButtonProps> = (props) => {
 
 export const DropDownProfile = () => {
   return (
-    <div className="flex flex-col DropDownProfile">
-      <ul className="flex flex-col gap-4">
+    <div className='flex flex-col DropDownProfile'>
+      <ul className='flex flex-col gap-4'>
         <li>
-          <Link to="/CuentaPage">Mi Cuenta</Link>
+          <Link to='/CuentaPage'>Mi Cuenta</Link>
         </li>
         <li>Mis Pedidos</li>
         <li>Favoritos</li>

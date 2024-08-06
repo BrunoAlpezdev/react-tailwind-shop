@@ -5,8 +5,8 @@ export function AvatarComponent() {
   return (
     <Avatar
       isBordered
-      radius="lg"
-      src="https://discord.com/channels/@me/830143124826882068/1267912410816315400"
+      radius='lg'
+      src='https://discord.com/channels/@me/830143124826882068/1267912410816315400'
     />
   )
 }

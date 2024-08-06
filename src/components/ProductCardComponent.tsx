@@ -42,24 +42,24 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
   const uniqueLayoutId = `productCardImage-${props.idProducto}`
 
   return (
-    <motion.div className="max-w-fit">
+    <motion.div className='max-w-fit'>
       <Card
         isFooterBlurred
-        radius="lg"
-        className="border-none  bg-brand-dark-shades/60 dark:bg-brand-light-shades/60 p-2">
+        radius='lg'
+        className='border-none  bg-brand-dark-shades/60 dark:bg-brand-light-shades/60 p-2'>
         {/* Se le pasa el path al link para que pueda redirigir a la pagina de producto en especifico */}
         <Link to={path}>
           <div>
             <motion.img
               layoutId={uniqueLayoutId}
-              alt="main product card"
-              className="object-cover w-52 h-52 rounded-2xl"
+              alt='main product card'
+              className='object-cover w-52 h-52 rounded-2xl'
               src={props.imagen}
             />
           </div>
         </Link>
 
-        <section className="flex justify-between border border-white/20 bg-brand-dark-shades/60 dark:bg-brand-light-shades/60 backdrop-blur-sm bottom-3 absolute rounded-xl py-1 w-[calc(100%-24px)] shadow-small ml-1 z-10 p-1 gap-1">
+        <section className='flex justify-between border border-white/20 bg-brand-dark-shades/60 dark:bg-brand-light-shades/60 backdrop-blur-sm bottom-3 absolute rounded-xl py-1 w-[calc(100%-24px)] shadow-small ml-1 z-10 p-1 gap-1'>
           <ButtonWithState Icon={<CashIcon />} onClick={comprarClick} />
           <ButtonWithState Icon={<CartIcon />} onClick={agregarCarritoClick} />
         </section>

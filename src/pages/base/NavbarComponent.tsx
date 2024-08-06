@@ -17,20 +17,20 @@ const NavbarComponent = () => {
   const isLogged = true
 
   return (
-    <header className="relative">
+    <header className='relative'>
       {/* Sombra */}
-      <div className="absolute -inset-y-1 inset-x-0 bg-brand-dark-shades dark:bg-brand-main-700 blur-sm"></div>
+      <div className='absolute -inset-y-1 inset-x-0 bg-brand-dark-shades dark:bg-brand-main-700 blur-sm'></div>
       {/* Fin Sombra */}
 
-      <section className="relative px-4 py-2 bg-brand-dark-shades text-brand-light-shades dark:bg-brand-main-700">
-        <section className="flex justify-between items-center">
+      <section className='relative px-4 py-2 bg-brand-dark-shades text-brand-light-shades dark:bg-brand-main-700'>
+        <section className='flex justify-between items-center'>
           {/* item 1 */}
-          <Link to="/">
+          <Link to='/'>
             <BrandLogo />
           </Link>
 
           {/* item 2 */}
-          <section className="flex gap-3">
+          <section className='flex gap-3'>
             {categoriesList.map((category) => (
               <DropDownButton
                 key={category.idCategoria}
@@ -39,35 +39,35 @@ const NavbarComponent = () => {
               />
             ))}
           </section>
-          <section className="flex gap-3 justify-between items-center">
+          <section className='flex gap-3 justify-between items-center'>
             <section>
               {theme === 'light' ? (
                 <button
                   onClick={handleToggleTheme}
-                  className="transition hover:scale-110">
-                  <LightThemeIcon width={24} height={24} color="#EC9A94" />
+                  className='transition hover:scale-110'>
+                  <LightThemeIcon width={24} height={24} color='#EC9A94' />
                 </button>
               ) : (
                 <button
                   onClick={handleToggleTheme}
-                  className="transition hover:scale-110">
-                  <DarkThemeIcon width={24} height={24} color="#FF3D3D" />
+                  className='transition hover:scale-110'>
+                  <DarkThemeIcon width={24} height={24} color='#FF3D3D' />
                 </button>
               )}
             </section>
 
             {/* item 3 */}
             {isLogged ? (
-              <section className="">
+              <section className=''>
                 {openProfile && <DropDownProfile />}
                 <button
-                  className="bg-gradient-to-br from-brand-light-accent to-brand-light-shades dark:from-brand-dark-accent dark:to-brand-dark-shades-200 p-1 rounded-lg w-fit"
+                  className='bg-gradient-to-br from-brand-light-accent to-brand-light-shades dark:from-brand-dark-accent dark:to-brand-dark-shades-200 p-1 rounded-lg w-fit'
                   onClick={() => setOpenProfile((prev) => !prev)}>
                   <UserIcon />
                 </button>
               </section>
             ) : (
-              <section className=""></section>
+              <section className=''></section>
             )}
           </section>
         </section>

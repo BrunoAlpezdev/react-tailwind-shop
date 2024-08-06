@@ -8,8 +8,8 @@ export default function ProductPage() {
   const product = products.find((product) => product.idProducto === idProducto)
 
   return (
-    <section className="flex-grow flex items-center justify-center">
-      <h2 className="text-white">
+    <section className='flex-grow flex items-center justify-center'>
+      <h2 className='text-white'>
         Página de producto (hacer lógica) - ID: {idProducto}
       </h2>
 
@@ -17,10 +17,10 @@ export default function ProductPage() {
       {product && (
         <motion.img
           layoutId={uniqueLayoutId}
-          alt="main product card"
+          alt='main product card'
           width={400}
           height={400}
-          className="object-cover w-96 h-96 rounded-2xl"
+          className='object-cover w-96 h-96 rounded-2xl'
           src={product.imagen}
         />
       )}
