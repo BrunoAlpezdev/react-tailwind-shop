@@ -25,3 +25,4 @@ dist-ssr
 *.sw?
 CSS-TAILWIND-NOTES.md
 bloc.txt
+src/services/firebaseConfig.ts
