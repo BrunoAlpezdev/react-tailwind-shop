@@ -9,7 +9,7 @@ function CRUDPage() {
   return (
     <>
       <div>
-        <p>Hola</p>
+        <p>Hola chavales</p>
       </div>
       <DataTable columns={Columns} data={data} />
     </>
