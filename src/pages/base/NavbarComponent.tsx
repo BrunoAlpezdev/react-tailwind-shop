@@ -14,7 +14,7 @@ import { useState } from 'react'
 const NavbarComponent = () => {
   const { theme, handleToggleTheme } = useThemeHandler()
   const [openProfile, setOpenProfile] = useState<boolean>(false)
-  const isLogged = true
+  const [logged, setLogged] = useState<boolean>(false)
 
   return (
     <header className='relative'>
@@ -57,18 +57,25 @@ const NavbarComponent = () => {
             </section>
 
             {/* item 3 */}
-            {isLogged ? (
-              <section className=''>
-                {openProfile && <DropDownProfile />}
+            <section className=''>
+              {openProfile && <DropDownProfile />}
+              {logged ? (
                 <button
                   className='bg-gradient-to-br from-brand-light-accent to-brand-light-shades dark:from-brand-dark-accent dark:to-brand-dark-shades-200 p-1 rounded-lg w-fit'
                   onClick={() => setOpenProfile((prev) => !prev)}>
                   <UserIcon />
                 </button>
-              </section>
-            ) : (
-              <section className=''></section>
-            )}
+              ) : (
+                <Link to='/login'>
+                  <button className='bg-gradient-to-br from-brand-light-accent to-brand-light-shades dark:from-brand-dark-accent dark:to-brand-dark-shades-200 p-1 rounded-lg w-fit'>
+                    Iniciar Sesión
+                  </button>
+                </Link>
+              )}
+            </section>
+            <button onClick={() => setLogged(!logged)}>
+              DEV: Cambiar Login
+            </button>
           </section>
         </section>
       </section>

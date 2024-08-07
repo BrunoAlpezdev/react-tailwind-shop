@@ -1,5 +1,5 @@
 import '@styles/App.css'
-import { NavbarComponent, FooterComponent } from '@base/index'
+import { NavbarComponent, FooterComponent } from '@/pages'
 import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import {
@@ -9,24 +9,34 @@ import {
   CRUDPage,
   CuentaPage,
   NotFoundPage,
-} from './pages'
+  LoginPage
+} from '@/pages'
 
 function App() {
   return (
-    <div className="bg-brand-light-shades text-brand-dark-shades dark:bg-brand-dark-shades dark:text-brand-light-shades">
-      <AnimatePresence mode="sync">
-        <div className="body-container">
+    <div className='bg-brand-light-shades text-brand-dark-shades dark:bg-brand-dark-shades dark:text-brand-light-shades'>
+      <AnimatePresence mode='sync'>
+        <div className='body-container'>
           <NavbarComponent />
           <Routes>
+            {/* Home Page */}
             <Route index element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/politicas" element={<AboutPage />} />
-            <Route path="/contacto" element={<AboutPage />} />
-            <Route path="/CRUDPage" element={<CRUDPage />} />
-            <Route path="/producto/:idProducto" element={<ProductPage />} />
-            <Route path="/CuentaPage" element={<CuentaPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-            {/* ... */}
+
+            {/* Footer Links Section */}
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/politicas' element={<AboutPage />} />
+            <Route path='/contacto' element={<AboutPage />} />
+            <Route path='/CRUDPage' element={<CRUDPage />} />
+
+            {/* Auth Section */}
+            <Route path='/Login' element={<LoginPage />} />
+            <Route path='/CuentaPage' element={<CuentaPage />} />
+
+            {/* Product Section */}
+            <Route path='/P/:itemCategory/:itemId' element={<ProductPage />} />
+
+            {/* 404 */}
+            <Route path='*' element={<NotFoundPage />} />
           </Routes>
           <FooterComponent />
         </div>

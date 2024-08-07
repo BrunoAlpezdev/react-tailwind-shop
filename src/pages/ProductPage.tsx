@@ -3,14 +3,14 @@ import { motion } from 'framer-motion'
 import products from '@data/productsList'
 
 export default function ProductPage() {
-  const { idProducto } = useParams()
-  const uniqueLayoutId = `productCardImage-${idProducto}`
-  const product = products.find((product) => product.idProducto === idProducto)
+  const { itemCategory, itemId } = useParams()
+  const uniqueLayoutId = `productCardImage-${itemId}`
+  const product = products.find((product) => product.idProducto === itemId)
 
   return (
     <section className='flex-grow flex items-center justify-center'>
       <h2 className='text-white'>
-        Página de producto (hacer lógica) - ID: {idProducto}
+        Página de producto (hacer lógica) - ID: {itemId} {itemCategory}
       </h2>
 
       {/* TODO: Esto queda feo aun así que ojito en si darse la flojera de hacerlo o borrarlo */}

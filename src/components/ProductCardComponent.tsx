@@ -38,7 +38,7 @@ const ProductCardComponent: React.FC<ProductCardComponentProps> = (props) => {
   {
     /* Se arma el path para pasarselo al link ya que si se le pasa en el componente directo peta */
   }
-  const path = '/producto/' + props.idProducto
+  const path = '/p/' + props.categoria + '/' + props.idProducto
   const uniqueLayoutId = `productCardImage-${props.idProducto}`
 
   return (
