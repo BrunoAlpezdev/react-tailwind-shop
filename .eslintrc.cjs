@@ -4,19 +4,20 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
+    'plugin:react-hooks/recommended'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
+    exclude: ['vite.config.ts'],
+    tsconfigRootDir: __dirname
   },
   plugins: ['react-refresh', '@typescript-eslint', 'prettier'],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
-    ],
-  },
-};
+      { allowConstantExport: true }
+    ]
+  }
+}
