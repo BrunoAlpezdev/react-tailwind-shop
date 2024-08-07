@@ -17,7 +17,8 @@ export default function LoginPage() {
               Correo
             </p>
             <input
-              type='text'
+              type='email'
+              placeholder='tucorreo@dominio.com'
               name=''
               id=''
               className='w-full px-4 py-2 rounded-md shadow-md'
