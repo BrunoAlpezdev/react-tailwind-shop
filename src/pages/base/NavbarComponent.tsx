@@ -1,20 +1,36 @@
 import '@styles/App.css'
+import { DropDownProfile } from '@components/index'
+import { Link } from 'react-router-dom'
+import { Skeleton } from '@nextui-org/skeleton'
+import useThemeHandler from '@/hooks/useThemeHandler'
+import { useAuth } from '@/hooks/useAuth'
 import {
   LightThemeIcon,
   DarkThemeIcon,
-  BrandLogo,
-  UserIcon
+  BrandLogo
 } from '@components/IconsComponent'
-import { DropDownButton, DropDownProfile } from '@components/index'
-import { Link } from 'react-router-dom'
-import categoriesList from '@data/categoriesList'
-import useThemeHandler from 'src/hooks/useThemeHandler'
-import { useState } from 'react'
+import { getUniqueCategories } from '@/services/firebase'
+import { useEffect, useState } from 'react'
 
 const NavbarComponent = () => {
   const { theme, handleToggleTheme } = useThemeHandler()
-  const [openProfile, setOpenProfile] = useState<boolean>(false)
-  const [logged, setLogged] = useState<boolean>(false)
+  const { user } = useAuth()
+  const [categories, setCategories] = useState<string[] | undefined>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const uniqueCategories = await getUniqueCategories()
+        setCategories(uniqueCategories)
+        setLoading(false)
+      } catch (error) {
+        console.error('Error fetching categories:', error)
+      }
+    }
+
+    fetchCategories()
+  }, [])
 
   return (
     <header className='relative'>
@@ -30,17 +46,25 @@ const NavbarComponent = () => {
           </Link>
 
           {/* item 2 */}
+          {loading ? (
+            <div className='px-12 w-full h-full'>
+              <Skeleton className='rounded-lg w-full h-full'>
+                <div className='min-w-8 min-h-8 w-full h-full rounded-lg bg-default-300'></div>
+              </Skeleton>
+            </div>
+          ) : (
+            <></>
+          )}
           <section className='flex gap-3'>
-            {categoriesList.map((category) => (
-              <DropDownButton
-                key={category.idCategoria}
-                nombreBoton={category.nombreBoton}
-                categorias={category.categorias}
-              />
+            {categories?.map((category) => (
+              <Link to={`/p/${category}`} className='' key={category}>
+                {category}
+              </Link>
             ))}
           </section>
+
           <section className='flex gap-3 justify-between items-center'>
-            <section>
+            <section className='flex gap-3 justify-between items-center'>
               {theme === 'light' ? (
                 <button
                   onClick={handleToggleTheme}
@@ -57,25 +81,19 @@ const NavbarComponent = () => {
             </section>
 
             {/* item 3 */}
-            <section className=''>
-              {openProfile && <DropDownProfile />}
-              {logged ? (
-                <button
-                  className='bg-gradient-to-br from-brand-light-accent to-brand-light-shades dark:from-brand-dark-accent dark:to-brand-dark-shades-200 p-1 rounded-lg w-fit'
-                  onClick={() => setOpenProfile((prev) => !prev)}>
-                  <UserIcon />
-                </button>
+            <section className='flex gap-3 justify-between items-center'>
+              {user ? (
+                <DropDownProfile />
               ) : (
-                <Link to='/login'>
-                  <button className='bg-gradient-to-br from-brand-light-accent to-brand-light-shades dark:from-brand-dark-accent dark:to-brand-dark-shades-200 p-1 rounded-lg w-fit'>
-                    Iniciar Sesión
-                  </button>
-                </Link>
+                <>
+                  <Link to='/auth/login'>
+                    <button className='text-brand-dark-shades dark:text-brand-light-shades font-semibold bg-gradient-to-br from-brand-light-accent to-brand-light-shades dark:from-brand-dark-accent dark:to-brand-dark-shades-200 px-3 py-1 rounded-lg w-fit'>
+                      Login
+                    </button>
+                  </Link>
+                </>
               )}
             </section>
-            <button onClick={() => setLogged(!logged)}>
-              DEV: Cambiar Login
-            </button>
           </section>
         </section>
       </section>

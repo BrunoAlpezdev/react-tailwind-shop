@@ -10,6 +10,7 @@ import { subCategories } from '../interfaces/types'
 import { Link } from 'react-router-dom'
 import '@styles/CRUD.css'
 import '@styles/Components.css'
+import { useAuth } from '@/hooks/useAuth'
 
 type ButtonWithStateProps = {
   Icon: React.JSX.Element
@@ -128,17 +129,46 @@ export const CRUDButton: React.FC<CRUDButtonProps> = (props) => {
   )
 }
 
+import useOpenProfile from '@/hooks/useOpenProfile'
+import { UserIcon } from './IconsComponent'
 export const DropDownProfile = () => {
+  const { logout } = useAuth()
+  const { openProfile, handleOpenProfile } = useOpenProfile()
+
+  const handleLogout = async () => {
+    handleOpenProfile
+    try {
+      await logout()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
-    <div className='flex flex-col DropDownProfile'>
-      <ul className='flex flex-col gap-4'>
-        <li>
-          <Link to='/CuentaPage'>Mi Cuenta</Link>
-        </li>
-        <li>Mis Pedidos</li>
-        <li>Favoritos</li>
-        <li>Cerrar sesion</li>
-      </ul>
-    </div>
+    <>
+      <button
+        className='bg-gradient-to-br from-brand-light-accent to-brand-light-shades dark:from-brand-dark-accent dark:to-brand-dark-shades-200 p-1 rounded-lg w-fit'
+        onClick={handleOpenProfile}>
+        <UserIcon />
+      </button>
+      {openProfile ? (
+        <div className='flex flex-col DropDownProfile'>
+          <ul className='flex flex-col gap-4'>
+            <li>
+              <Link to='/auth/Cuenta'>Mi Cuenta</Link>
+            </li>
+            <li>Mis Pedidos</li>
+            <li>Favoritos</li>
+            <li>
+              <Link to='/' onClick={handleLogout}>
+                Cerrar Sesión
+              </Link>
+            </li>
+          </ul>
+        </div>
+      ) : (
+        <></>
+      )}
+    </>
   )
 }

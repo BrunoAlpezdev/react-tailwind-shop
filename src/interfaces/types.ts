@@ -22,3 +22,7 @@ export type Variant = {
   variantName: string
   variantStock: number
 }
+
+export type user = {
+  login: true
+}
