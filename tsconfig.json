@@ -17,6 +17,7 @@
       "@pages/*": ["src/pages/*"],
       "@base/*": ["src/pages/base/*"],
       "@data/*": ["src/data/*"],
+      "@context/*": ["src/context/*"],
       "@services/*": ["src/services/*"]
     },
     "jsx": "react-jsx", // Si usas React 17+

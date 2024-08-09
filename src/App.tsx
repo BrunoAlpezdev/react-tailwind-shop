@@ -1,5 +1,5 @@
 import '@styles/App.css'
-import { NavbarComponent, FooterComponent } from '@/pages'
+import { NavbarComponent, FooterComponent, RegistroPage } from '@/pages'
 import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import {
@@ -11,6 +11,7 @@ import {
   NotFoundPage,
   LoginPage
 } from '@/pages'
+import { ProtectedRoute } from './components/ProtectedRoute'
 
 function App() {
   return (
@@ -26,11 +27,27 @@ function App() {
             <Route path='/about' element={<AboutPage />} />
             <Route path='/politicas' element={<AboutPage />} />
             <Route path='/contacto' element={<AboutPage />} />
-            <Route path='/CRUDPage' element={<CRUDPage />} />
+
+            <Route
+              path='/CRUDPage'
+              element={
+                <ProtectedRoute>
+                  <CRUDPage />
+                </ProtectedRoute>
+              }
+            />
 
             {/* Auth Section */}
-            <Route path='/Login' element={<LoginPage />} />
-            <Route path='/CuentaPage' element={<CuentaPage />} />
+            <Route
+              path='/auth/Cuenta'
+              element={
+                <ProtectedRoute>
+                  <CuentaPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route path='/auth/Login' element={<LoginPage />} />
+            <Route path='/auth/Registro' element={<RegistroPage />} />
 
             {/* Product Section */}
             <Route path='/P/:itemCategory/:itemId' element={<ProductPage />} />
